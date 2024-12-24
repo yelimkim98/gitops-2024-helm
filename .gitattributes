@@ -1,0 +1,16 @@
+# Line ending control for YAML and scripts
+*.yaml text eol=lf
+*.yml text eol=lf
+*.sh text eol=lf
+
+# Treat packaged Helm Charts as binary files
+*.tgz binary
+
+# Custom diff for templates
+*.tpl diff
+*.yaml diff
+*.yml diff
+
+# Ignore specific files in git archive
+.gitignore export-ignore
+.gitattributes export-ignore

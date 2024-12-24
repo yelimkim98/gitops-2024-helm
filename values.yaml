@@ -1,0 +1,8 @@
+replicaCount: 2
+image:
+  repository: kiel0103/gitops-2024-service:17d9094
+  pullPolicy: Always
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 8080

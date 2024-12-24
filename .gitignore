@@ -1,0 +1,31 @@
+# Node modules (if any scripts use Node.js)
+node_modules/
+
+# Helm-specific files
+# Helm produces a `charts/` directory during dependency updates.
+charts/
+
+# Local build artifacts
+*.tgz
+*.log
+
+# Editor-specific files
+*.swp
+*.swo
+.idea/
+.vscode/
+.DS_Store
+
+# Backup files
+*.bak
+*.tmp
+*.~*
+
+# Sensitive configuration files (if applicable)
+secrets.yaml
+values.local.yaml
+
+# Helm lint and test artifacts
+.kube/
+output/
+test-results/

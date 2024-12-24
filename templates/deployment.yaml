@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-deployment
+  labels:
+    app: {{ .Chart.Name }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name }}-container
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}-container
+    spec:
+      containers:
+      - name: backend-container
+        image: {{ .Values.image.repository }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
