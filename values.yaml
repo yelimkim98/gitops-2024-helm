@@ -1,6 +1,6 @@
 replicaCount: 2
 image:
-  repository: kiel0103/gitops-2024-service:17d9094
+  repository: kiel0103/gitops-2024-service:9496b8b
   pullPolicy: Always
 service:
   type: LoadBalancer
